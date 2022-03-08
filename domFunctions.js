@@ -19,6 +19,9 @@ const createElement = (place, domElement, ...args) => {
 
             (args.length > 1) ? alt = args[1]: null;
         }
+
+        (src != '') ? newElement.src = src : null ;
+        (alt != '') ? newElement.alt = alt : null ;
     }
 
     if (domElement == 'input'){
