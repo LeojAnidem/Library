@@ -8,6 +8,10 @@ Element guia:
         --> Siempre y cuando domElement no sea igual a 'input' <--            
             1 argumento(s) -> [... , className (+)]        
             2 argumento(s) -> [... , text (+)]             * ... : (place, domElement, className) 
+        
+        --> cuando domElement sea igual a 'img' <--
+            1 argumento(s) -> [... , src (+)]          
+            2 argumento(s) -> [... , alt (+)]
 
         --> cuando domElement sea igual a 'input' <-- 
             1 argumento(s) -> [... , type (+)]          

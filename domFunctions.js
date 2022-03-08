@@ -5,11 +5,21 @@ const deleteChild = (child) => {
     father.removeChild(_(child));
 }
 
-const element = (place, domElement, ...args) => {
+const createElement = (place, domElement, ...args) => {
     let className, text, tipe;
 
     (domElement != undefined && domElement != '') ? null : domElement = 'p';
     const newElement = document.createElement(domElement);
+    
+    if (domElement == 'img'){
+        let src, alt;
+
+        if(args.length >=1){
+            src = args[0];
+
+            (args.length > 1) ? alt = args[1]: null;
+        }
+    }
 
     if (domElement == 'input'){
         let type, placeHolder, minLength, maxLength;
@@ -52,4 +62,4 @@ const element = (place, domElement, ...args) => {
     }
 }
 
-export {_, deleteChild, element};
+export {_, deleteChild, createElement};
