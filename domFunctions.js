@@ -11,6 +11,19 @@ const createElement = (place, domElement, ...args) => {
     (domElement != undefined && domElement != '') ? null : domElement = 'p';
     const newElement = document.createElement(domElement);
     
+    if (domElement == 'label'){
+        let text, fo;
+
+        if (args.length >= 1){
+            text = args[0];
+
+            (args.length > 1) ? fo = args[1] : null;
+        }
+
+        (text != '') ? newElement.textContent = text : null;
+        (fo != '') ? newElement.for = fo : null;
+    }
+
     if (domElement == 'img'){
         let src, alt;
 
@@ -25,22 +38,42 @@ const createElement = (place, domElement, ...args) => {
     }
 
     if (domElement == 'input'){
-        let type, placeHolder, minLength, maxLength;
+        let type;
 
         if(args.length >=1){
             type = args[0];
             tipe = type;
 
-            (args.length > 1) ? className = args[1]: null;
-            (args.length > 2) ? placeHolder = args[2]: null;
-            (args.length > 3) ? minLength = args[3]: null;
-            (args.length > 4) ? maxLength = args[4]: null;
-        }
+            if (type == 'radio'){
+                let id, name, requiredBoolean;
 
-        (type != '') ? newElement.type = type : null ;
-        (placeHolder != '') ? newElement.placeholder = placeHolder : null ;
-        (minLength != '') ? newElement.minlength = minLength : null ;
-        (maxLength != '') ? newElement.maxlength = maxLength : null ;
+                if (args.length >= 1){
+                    id = args[0];
+
+                    (args.length > 1) ? name = args[1] : null;
+                    (args.length > 2) ? requiredBoolean = args[2] : null;
+                }                
+
+                (id != '') ? newElement.id = id : null;
+                (name != '') ? newElement.name = name : null;
+                (requiredBoolean != '') ? newElement.required = requiredBoolean : null ;
+            }
+
+            else{
+
+                let  placeHolder, minLength, maxLength;
+
+                (args.length > 1) ? className = args[1]: null;
+                (args.length > 2) ? placeHolder = args[2]: null;
+                (args.length > 3) ? minLength = args[3]: null;
+                (args.length > 4) ? maxLength = args[4]: null;
+
+                (type != '') ? newElement.type = type : null ;
+                (placeHolder != '') ? newElement.placeholder = placeHolder : null ;
+                (minLength != '') ? newElement.minlength = minLength : null ;
+                (maxLength != '') ? newElement.maxlength = maxLength : null ;
+            }   
+        }
     }
 
     if (args.length >= 1 && domElement != 'input') {

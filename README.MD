@@ -9,6 +9,10 @@ Element guia:
             1 argumento(s) -> [... , className (+)]        
             2 argumento(s) -> [... , text (+)]             * ... : (place, domElement, className) 
         
+        --> cuando domElement sea igual a 'label' <--
+            1 argumento(s) -> [... , text (+)]          
+            2 argumento(s) -> [... , for (+)]
+
         --> cuando domElement sea igual a 'img' <--
             1 argumento(s) -> [... , src (+)]          
             2 argumento(s) -> [... , alt (+)]
@@ -19,6 +23,11 @@ Element guia:
             3 argumento(s) -> [... , placeholder (+)]          
             4 argumento(s) -> [... , minLength (+)]
             5 argumento(s) -> [... , maxLength (+)]
+
+            --> cuando type sea igual a 'radio' <-- 
+                1 argumento(s) -> [... , id (+)]
+                2 argumento(s) -> [... , name (+)]
+                3 argumento(s) -> [... , requiredBoolean (+)]
             
         glosario:
             place: Hace referencia al lugar* en donde se va a crear el nuevo elemento.
