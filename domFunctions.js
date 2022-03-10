@@ -76,7 +76,7 @@ const createElement = (place, domElement, ...args) => {
         }
     }
 
-    if (args.length >= 1 && (domElement != 'input' || domElement != 'label' || domElement != 'img' )) {
+    if (args.length >= 1 && (domElement != 'input' && domElement != 'label' && domElement != 'img' )) {
         className = args[0];
 
         (args.length > 1) ? text = args[1] : null; 
