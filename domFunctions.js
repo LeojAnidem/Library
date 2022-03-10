@@ -21,7 +21,7 @@ const createElement = (place, domElement, ...args) => {
         }
 
         (text != '') ? newElement.textContent = text : null;
-        (fo != '') ? newElement.id = fo : null;
+        (fo != '') ? newElement.setAttribute('for', fo) : null;
     }
 
     if (domElement == 'img'){
