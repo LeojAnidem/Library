@@ -21,7 +21,7 @@ const createElement = (place, domElement, ...args) => {
         }
 
         (text != '') ? newElement.textContent = text : null;
-        (fo != '') ? newElement.for = fo : null;
+        (fo != '') ? newElement.id = fo : null;
     }
 
     if (domElement == 'img'){
@@ -54,6 +54,7 @@ const createElement = (place, domElement, ...args) => {
                     (args.length > 3) ? requiredBoolean = args[3] : null;
                 }                
 
+                (type != '') ? newElement.type = type : null ;
                 (id != '') ? newElement.id = id : null;
                 (name != '') ? newElement.name = name : null;
                 (requiredBoolean != '') ? newElement.required = requiredBoolean : null ;
