@@ -47,11 +47,11 @@ const createElement = (place, domElement, ...args) => {
             if (type == 'radio'){
                 let id, name, requiredBoolean;
 
-                if (args.length >= 1){
-                    id = args[0];
+                if (args.length >= 2){
+                    id = args[1];
 
-                    (args.length > 1) ? name = args[1] : null;
-                    (args.length > 2) ? requiredBoolean = args[2] : null;
+                    (args.length > 2) ? name = args[2] : null;
+                    (args.length > 3) ? requiredBoolean = args[3] : null;
                 }                
 
                 (id != '') ? newElement.id = id : null;
