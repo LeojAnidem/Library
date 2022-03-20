@@ -1,6 +1,6 @@
-Element guia:
+# Element guia:
 
-        element (2 parametros y 'n' argumentos) -> [place, domElement, ...args]
+    element (2 parametros y 'n' argumentos) -> [place, domElement, ...args]
 
         * ... : Parametros anteriores (ex. place, domElement)
         (+) : nuevo parametro
@@ -47,3 +47,8 @@ Element guia:
 
             className, type, placeHolder, minLength y maxLength hacen referencia a propiedades
             pertenecientes al elemento creado.
+
+# imgPreview:
+    
+    inputId ---> Input[type = 'File'] donde se toma la imagen
+    imgID   ---> Img donde se va a previsualizar la inmagen
