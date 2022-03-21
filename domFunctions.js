@@ -123,7 +123,7 @@ const getContrast = function (hexcolor){
 	var yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
 
 	// Check contrast
-	return (yiq >= 128) ? 'black' : 'white';
+	return (yiq >= 128) ? '#272727' : '#ffffff';
 
 };
 
