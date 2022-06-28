@@ -45,18 +45,22 @@ const createElement = (place, domElement, ...args) => {
             tipe = type;
 
             if (type == 'radio'){
-                let id, name, requiredBoolean;
+                let id, name, className, value, requiredBoolean;
 
                 if (args.length >= 2){
                     id = args[1];
-
+			
                     (args.length > 2) ? name = args[2] : null;
-                    (args.length > 3) ? requiredBoolean = args[3] : null;
+		    (args.length > 3) ? className = args[3] : null;
+		    (args.length > 4) ? value = args[4] : null;
+                    (args.length > 5) ? requiredBoolean = args[5] : null;
                 }                
 
                 (type != '') ? newElement.type = type : null ;
                 (id != '') ? newElement.id = id : null;
                 (name != '') ? newElement.name = name : null;
+		(className != '') ? newElement.className = className : null;
+		(value != '') ? newElement.value = value : null;
                 (requiredBoolean != '') ? newElement.required = requiredBoolean : null ;
             }
 
