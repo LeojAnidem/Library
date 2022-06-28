@@ -45,7 +45,7 @@ const createElement = (place, domElement, ...args) => {
             tipe = type;
 
             if (type == 'radio'){
-                let id, name, className, value, requiredBoolean;
+                let id, name, value, requiredBoolean;
 
                 if (args.length >= 2){
                     id = args[1];
